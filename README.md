@@ -5,4 +5,4 @@ Esse é um projeto que une todos os pontos que aprendi(operador in, métodos com
 
 Transformei tudo que aprendi em algo útil e mais palpável. 
 
-Definindo o país> calcular o custo total>criar projeto para poupar por mês que mostre até o tempo necessário para realizar essa viagem.
+Definindo o país> calcular o custo total> criar projeto para poupar por mês que mostre até o tempo necessário para realizar essa viagem.

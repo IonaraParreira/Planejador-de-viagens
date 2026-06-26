@@ -16,6 +16,18 @@ for destino in novos_destinos:
     pais_cidade, dias, custo = destino
     destinos_atuais = [item[0] for item in roteiro_europa]
 
+# 3. Usando o pop() para retirar o último item da lista de novos destinos para analisar separado
+destino_suspenso = novos_destinos.pop()
+print(f"🧹 {destino_suspenso[0]} país repetido não foi adicionado da lista de novos destinos.")
+
+# 4. Usando o remove() caso eu mude de ideia sobre algum país específico
+# Removendo ex: Espanha(Madri) para teste
+for item in novos_destinos:
+    if item[0] == "Espanha (Madri)":
+        novos_destinos.remove(item)
+        print(f"❌ {item[0]} foi retirado da lista.")
+        break
+
     # Impede destinos duplicados usando o operador 'in'
     if pais_cidade not in destinos_atuais:
         # Usando append() para adicionar ao fim da jornada
@@ -23,14 +35,14 @@ for destino in novos_destinos:
         print()
         print(f"✈️  {pais_cidade} adicionado com sucesso ao roteiro!")
 
-# 3. Organizando os destinos por custo usando 'sort()'
+# 5. Organizando os destinos por custo usando 'sort()'
 # Ordenando o começo da viagem pelos países onde o custo diário é menor
 roteiro_europa.sort(key=lambda x: x[2])
 
-# 4. Loops,Desempacotamento de Tuplas e Cálculo do Custo Total
+# 6. Loops,Desempacotamento de Tuplas e Cálculo do Custo Total
 custo_total_eurotrip = 0
 total_dias = 0
-
+print("--------------------------------------------------------")
 print("🗺️  ROTEIRO PREVISTO PARA A EUROPA")
 print()
 for parada in roteiro_europa:
